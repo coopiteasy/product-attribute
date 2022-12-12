@@ -16,6 +16,7 @@ class ProductTemplate(models.Model):
         comodel_name="product.print.category",
         compute="_compute_print_category_id",
         inverse="_inverse_print_category_id",
+        store=True,
     )
 
     to_print = fields.Boolean(compute="_compute_to_print", inverse="_inverse_to_print")
